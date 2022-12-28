@@ -30,7 +30,7 @@ Scenario: Cálculo de todos os pedidos já feitos
     And eu posso ver o “média do valor” dos pedidos igual a “R$46,00”
     And eu posso ver a lista de pedidos do período
 
-Scenario: Cenário 4: Filtrar apenas o valor total dos pedidos do período
+Scenario: Filtrar apenas o valor total dos pedidos do período
     Given eu estou logado como “Usuário” com login “vrb” e senha “1234”
     And eu estou na página “Resumo mensal”
     And no período de “12/2022” até “12/2022” houveram “10” pedidos, de valor total igual a “R$500,00”
