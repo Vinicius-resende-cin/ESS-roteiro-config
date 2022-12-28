@@ -46,3 +46,11 @@ Scenario: Tentativa de cálculo de pedidos por um usuário que não está logado
     When eu tento acessar a página "Resumo Mensal"
     Then eu vejo uma mensagem de “falha de autenticação"
     And eu sou redirecionado para a página "Login"
+
+Scenario: Tentativa de filtrar valores quando não há nenhum pedido
+    Given eu estou logado como “Usuário” com login “vrb” e senha “1234”
+    And eu estou na página “Resumo mensal”
+    And no período de “12/2022” até “12/2022” houveram “0” pedidos, de valor total igual a “R$,00”
+    When eu seleciono o período do cálculo de “12/2022” até “12/2022”
+    And eu filtro apenas por “valor total” dos pedidos
+    Then eu vejo uma mensagem de “falha por falta de pedidos”
