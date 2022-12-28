@@ -40,3 +40,8 @@ Scenario: Filtrar apenas o valor total dos pedidos do período
     And eu não posso ver o “quantidade total” dos pedidos
     And eu não posso ver o “média do valor” dos pedidos
     And eu posso ver a lista de pedidos do período
+
+Scenario: Tentativa de cálculo de pedidos por um usuário que não está logado no sistema
+    Given eu não estou logado no sistema
+    When eu tento acessar a página "Resumo Mensal"
+    Then eu vejo uma mensagem de “falha de autenticação"
