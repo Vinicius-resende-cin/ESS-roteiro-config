@@ -45,3 +45,4 @@ Scenario: Tentativa de cálculo de pedidos por um usuário que não está logado
     Given eu não estou logado no sistema
     When eu tento acessar a página "Resumo Mensal"
     Then eu vejo uma mensagem de “falha de autenticação"
+    And eu sou redirecionado para a página "Login"
