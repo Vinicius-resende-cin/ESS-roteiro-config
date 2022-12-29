@@ -1,6 +1,6 @@
 Feature: Calcular Total de Pedidos no Mês
     As a Usuário registrado no sistema
-    I want to ser capaz de acessar um cálculo mensal do total dos pedidos, valor total de pedidos e valor médio dos pedidos no mês
+    I want to ser capaz de acessar um cálculo mensal do total de pedidos, valor total dos pedidos e valor médio de pedidos no mês
 
     Scenario: Cálculo bem sucedido de pedidos do último mês
         Given eu estou logado como “Usuário” com login “vrb” e senha “1234”
